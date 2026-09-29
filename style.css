@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #003b73, #0077b6, #00a6d6);
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px #0005;
+}
+
+
+/* USER INFO */
+
+.form-section {
+    padding: 40px 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.form-section > p {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    margin: 10px 0 25px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    margin: 10px auto;
+    background: #008dcc;
+    border-radius: 5px;
+}
+
+#userForm {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#userForm > label {
+    color: #555;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f5f7f8;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #008dcc;
+    background: white;
+}
+
+
+/* GENDER */
+
+.gender-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gender-group > label:first-child {
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #666;
+}
+
+.radio input {
+    width: 14px;
+    height: 14px;
+    accent-color: #008dcc;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 180px;
+    height: 42px;
+    margin: 20px auto 0;
+    border: 0;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00a6df, #0073b7);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #0077b655;
+}
+
+
+/* INFORMATION */
+
+.output {
+    padding: 40px 50px;
+    color: white;
+    background: linear-gradient(145deg, #008dcc, #0069a8, #004d91);
+}
+
+.output h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.output h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin-top: 8px;
+    background: white;
+    border-radius: 5px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #ffffff33;
+    font-size: 12px;
+}
+
+.info-item span {
+    color: #ffffffcc;
+}
+
+.info-item strong {
+    color: white;
+    text-align: right;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .form-section,
+    .output {
+        padding: 30px 25px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .info-item strong {
+        text-align: left;
+    }
+}
