@@ -27,11 +27,13 @@ document.getElementById("showButton").addEventListener("click", function () {
     document.getElementById("displayHobby").textContent =
         document.getElementById("hobby").value;
 
-    document.getElementById("displayColor").textContent =
-        document.getElementById("color").value;
+    document.getElementById("displayCountry").textContent =
+        document.getElementById("country").value;
 
-    const gender = document.querySelector('input[name="gender"]:checked');
+    const gender =
+        document.querySelector('input[name="gender"]:checked');
 
     document.getElementById("displayGender").textContent =
         gender ? gender.value : "";
+
 });
