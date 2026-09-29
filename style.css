@@ -6,106 +6,149 @@
 
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 30px;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #003b73, #0077b6, #00a6d6);
+
+    background:
+        radial-gradient(circle at 10% 20%, #36d1ff55, transparent 30%),
+        radial-gradient(circle at 90% 80%, #004a9f66, transparent 30%),
+        linear-gradient(135deg, #002f63, #0077b6, #00a6d6);
 }
 
 .container {
-    width: 100%;
-    max-width: 700px;
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px #0005;
+    max-width: 850px;
+    margin: auto;
 }
 
 
-/* USER INFO */
+/* CARDS */
 
-.form-section {
-    padding: 40px 50px;
+.form-card,
+.info-card {
+    padding: 35px 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px #001f3f55;
+}
+
+.form-card {
+    background: white;
+    margin-bottom: 25px;
+}
+
+
+/* TITLES */
+
+h1,
+h2 {
+    font-weight: normal;
 }
 
 h1 {
     text-align: center;
     color: #222;
-    font-size: 28px;
-    font-weight: normal;
+    font-size: 27px;
 }
 
-.form-section > p {
+h1 i {
+    color: #008dcc;
+}
+
+.form-card > p {
     text-align: center;
     color: #999;
     font-size: 13px;
-    margin: 10px 0 25px;
+    margin: 8px 0 25px;
 }
 
-h1::after {
+h1::after,
+h2::after {
     content: "";
     display: block;
     width: 45px;
     height: 3px;
     margin: 10px auto;
+    border-radius: 10px;
     background: #008dcc;
-    border-radius: 5px;
 }
 
-#userForm {
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-column {
     display: flex;
     flex-direction: column;
     gap: 7px;
 }
 
-#userForm > label {
+.form-column label {
+    margin-top: 5px;
     color: #555;
     font-size: 11px;
     font-weight: bold;
-    margin-top: 5px;
 }
 
-input,
-select {
+.form-column label i {
+    width: 18px;
+    color: #008dcc;
+}
+
+
+/* INPUTS */
+
+input {
     width: 100%;
     height: 40px;
     padding: 0 12px;
+
     border: 1px solid #ddd;
-    border-radius: 6px;
-    background: #f5f7f8;
+    border-radius: 7px;
+
     outline: none;
+    background: #f5f7f9;
+
+    transition: .3s;
 }
 
-input:focus,
-select:focus {
-    border-color: #008dcc;
+input:hover {
+    background: #eef8fb;
+    border-color: #a8d7e8;
+}
+
+input:focus {
     background: white;
+    border-color: #008dcc;
+    box-shadow: 0 0 0 3px #008dcc18;
 }
 
 
 /* GENDER */
 
-.gender-group {
+.gender {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.gender-group > label:first-child {
-    font-size: 11px;
-    font-weight: bold;
+.gender label {
     color: #555;
+    font-size: 11px;
+}
+
+.gender label:first-child {
+    font-weight: bold;
 }
 
 .radio {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 11px;
-    color: #666;
 }
 
 .radio input {
@@ -118,87 +161,159 @@ select:focus {
 /* BUTTON */
 
 button {
-    width: 180px;
-    height: 42px;
+    display: block;
+
+    width: 185px;
+    height: 44px;
+
     margin: 20px auto 0;
-    border: 0;
+
+    border: none;
     border-radius: 25px;
-    background: linear-gradient(135deg, #00a6df, #0073b7);
+
+    background: linear-gradient(135deg, #00bfff, #0073b7);
+
     color: white;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
+
     cursor: pointer;
     transition: .3s;
 }
 
+button i {
+    margin-right: 6px;
+}
+
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px #0077b655;
+    box-shadow: 0 10px 20px #0077b655;
 }
 
 
-/* INFORMATION */
+/* INFORMATION CARD */
 
-.output {
-    padding: 40px 50px;
+.info-card {
+    position: relative;
+    overflow: hidden;
+
     color: white;
-    background: linear-gradient(145deg, #008dcc, #0069a8, #004d91);
+
+    background:
+        radial-gradient(circle at 90% 10%, #ffffff22, transparent 25%),
+        linear-gradient(145deg, #009bd4, #006aa8, #00477f);
 }
 
-.output h2 {
+.info-card h2 {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
     font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 20px;
 }
 
-.output h2::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    margin-top: 8px;
+.info-card h2 i {
+    margin-right: 7px;
+}
+
+.info-card h2::after {
     background: white;
-    border-radius: 5px;
 }
 
-.info-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 11px 0;
-    border-bottom: 1px solid #ffffff33;
+
+/* INFO GRID */
+
+.info-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    margin-top: 20px;
+}
+
+.info-column div {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 5px;
+
+    padding: 12px 5px;
+
+    border-bottom: 1px solid #ffffff2b;
+
     font-size: 12px;
 }
 
-.info-item span {
-    color: #ffffffcc;
+.info-column div > i {
+    color: #9de8ff;
 }
 
-.info-item strong {
+.info-column span {
+    color: #ffffffbb;
+}
+
+.info-column strong {
+    grid-column: 2;
+
     color: white;
-    text-align: right;
+    word-break: break-word;
+}
+
+
+/* DECORATION */
+
+.info-card::before {
+    content: "";
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    top: -110px;
+    right: -70px;
+
+    border-radius: 50%;
+    background: #ffffff0c;
+}
+
+.info-card::after {
+    content: "";
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    bottom: -80px;
+    left: -50px;
+
+    border-radius: 50%;
+    background: #ffffff09;
 }
 
 
 /* MOBILE */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
     body {
         padding: 15px;
     }
 
-    .form-section,
-    .output {
+    .form-card,
+    .info-card {
         padding: 30px 25px;
     }
 
-    .info-item {
-        flex-direction: column;
-        gap: 4px;
+    .form-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
     }
 
-    .info-item strong {
-        text-align: left;
+    .gender {
+        flex-wrap: wrap;
     }
 }
