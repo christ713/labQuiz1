@@ -7,6 +7,9 @@
 
     <title>User Info Card</title>
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,125 +17,164 @@
 
     <div class="container">
 
-        <!-- =========================
-             USER INFORMATION FORM
-        ========================== -->
+        <!-- USER INFO CARD -->
 
-        <div class="form-section">
+        <div class="form-card">
 
-            <h1>User Info Card</h1>
+            <h1>
+                <i class="fa-solid fa-circle-user"></i>
+                User Info
+            </h1>
 
             <p>Enter your information below.</p>
 
             <form id="userForm">
 
-                <label for="fullName">Full Name</label>
-                <input
-                    type="text"
-                    id="fullName"
-                    placeholder="Enter your full name"
-                >
+                <!-- TWO COLUMNS -->
+
+                <div class="form-grid">
+
+                    <!-- LEFT COLUMN -->
+
+                    <div class="form-column">
+
+                        <label for="fullName">
+                            <i class="fa-solid fa-user"></i>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                        >
 
 
-                <label for="email">Email Address</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                >
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                        >
 
 
-                <label for="age">Age</label>
-                <input
-                    type="number"
-                    id="age"
-                    placeholder="Enter your age"
-                >
+                        <label for="age">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter your age"
+                        >
 
 
-                <label for="birthday">Birthday</label>
-                <input
-                    type="date"
-                    id="birthday"
-                >
+                        <label for="birthday">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            Birthday
+                        </label>
+
+                        <input
+                            type="date"
+                            id="birthday"
+                        >
 
 
-                <label for="phone">Phone Number</label>
-                <input
-                    type="tel"
-                    id="phone"
-                    placeholder="Enter your phone number"
-                >
+                        <label for="phone">
+                            <i class="fa-solid fa-phone"></i>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
 
 
-                <label for="address">Address</label>
-                <input
-                    type="text"
-                    id="address"
-                    placeholder="Enter your address"
-                >
+                    <!-- RIGHT COLUMN -->
+
+                    <div class="form-column">
+
+                        <label for="address">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Enter your address"
+                        >
 
 
-                <label for="course">Course</label>
-                <input
-                    type="text"
-                    id="course"
-                    placeholder="Enter your course"
-                >
+                        <label for="course">
+                            <i class="fa-solid fa-book"></i>
+                            Course
+                        </label>
+
+                        <input
+                            type="text"
+                            id="course"
+                            placeholder="Enter your course"
+                        >
 
 
-                <label for="school">School</label>
-                <input
-                    type="text"
-                    id="school"
-                    placeholder="Enter your school"
-                >
+                        <label for="school">
+                            <i class="fa-solid fa-school"></i>
+                            School
+                        </label>
+
+                        <input
+                            type="text"
+                            id="school"
+                            placeholder="Enter your school"
+                        >
 
 
-                <label for="hobby">Favorite Hobby</label>
-                <input
-                    type="text"
-                    id="hobby"
-                    placeholder="Enter your hobby"
-                >
+                        <label for="hobby">
+                            <i class="fa-solid fa-heart"></i>
+                            Favorite Hobby
+                        </label>
+
+                        <input
+                            type="text"
+                            id="hobby"
+                            placeholder="Enter your hobby"
+                        >
 
 
-                <label for="color">Favorite Color</label>
+                        <label for="country">
+                            <i class="fa-solid fa-globe"></i>
+                            Country
+                        </label>
 
-                <select id="color">
+                        <input
+                            type="text"
+                            id="country"
+                            placeholder="Enter your country"
+                        >
 
-                    <option value="">
-                        Select a color
-                    </option>
+                    </div>
 
-                    <option value="Red">
-                        Red
-                    </option>
-
-                    <option value="Blue">
-                        Blue
-                    </option>
-
-                    <option value="Green">
-                        Green
-                    </option>
-
-                    <option value="Purple">
-                        Purple
-                    </option>
-
-                    <option value="Black">
-                        Black
-                    </option>
-
-                </select>
+                </div>
 
 
                 <!-- GENDER -->
 
-                <div class="gender-group">
+                <div class="gender">
 
-                    <label>Gender</label>
+                    <label>
+                        <i class="fa-solid fa-venus-mars"></i>
+                        Gender
+                    </label>
 
                     <label class="radio">
                         <input
@@ -140,6 +182,7 @@
                             name="gender"
                             value="Male"
                         >
+                        <i class="fa-solid fa-mars"></i>
                         Male
                     </label>
 
@@ -149,6 +192,7 @@
                             name="gender"
                             value="Female"
                         >
+                        <i class="fa-solid fa-venus"></i>
                         Female
                     </label>
 
@@ -157,10 +201,8 @@
 
                 <!-- BUTTON -->
 
-                <button
-                    type="button"
-                    id="showButton"
-                >
+                <button type="button" id="showButton">
+                    <i class="fa-solid fa-eye"></i>
                     SHOW MY INFO
                 </button>
 
@@ -169,68 +211,97 @@
         </div>
 
 
-        <!-- =========================
-             INFORMATION OUTPUT
-        ========================== -->
+        <!-- MY INFORMATION CARD -->
 
-        <div class="output">
+        <div class="info-card">
 
-            <h2>My Information</h2>
+            <h2>
+                <i class="fa-solid fa-address-card"></i>
+                My Information
+            </h2>
 
-            <p class="info-item">
-                <span>Full Name</span>
-                <strong id="displayName">—</strong>
-            </p>
+            <div class="info-grid">
 
-            <p class="info-item">
-                <span>Email</span>
-                <strong id="displayEmail">—</strong>
-            </p>
+                <!-- LEFT 5 -->
 
-            <p class="info-item">
-                <span>Age</span>
-                <strong id="displayAge">—</strong>
-            </p>
+                <div class="info-column">
 
-            <p class="info-item">
-                <span>Birthday</span>
-                <strong id="displayBirthday">—</strong>
-            </p>
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <span>Full Name</span>
+                        <strong id="displayName">—</strong>
+                    </div>
 
-            <p class="info-item">
-                <span>Phone</span>
-                <strong id="displayPhone">—</strong>
-            </p>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                        <strong id="displayEmail">—</strong>
+                    </div>
 
-            <p class="info-item">
-                <span>Address</span>
-                <strong id="displayAddress">—</strong>
-            </p>
+                    <div>
+                        <i class="fa-solid fa-hashtag"></i>
+                        <span>Age</span>
+                        <strong id="displayAge">—</strong>
+                    </div>
 
-            <p class="info-item">
-                <span>Course</span>
-                <strong id="displayCourse">—</strong>
-            </p>
+                    <div>
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <span>Birthday</span>
+                        <strong id="displayBirthday">—</strong>
+                    </div>
 
-            <p class="info-item">
-                <span>School</span>
-                <strong id="displaySchool">—</strong>
-            </p>
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Phone</span>
+                        <strong id="displayPhone">—</strong>
+                    </div>
 
-            <p class="info-item">
-                <span>Favorite Hobby</span>
-                <strong id="displayHobby">—</strong>
-            </p>
+                </div>
 
-            <p class="info-item">
-                <span>Favorite Color</span>
-                <strong id="displayColor">—</strong>
-            </p>
 
-            <p class="info-item">
-                <span>Gender</span>
-                <strong id="displayGender">—</strong>
-            </p>
+                <!-- RIGHT 6 -->
+
+                <div class="info-column">
+
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Address</span>
+                        <strong id="displayAddress">—</strong>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-book"></i>
+                        <span>Course</span>
+                        <strong id="displayCourse">—</strong>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-school"></i>
+                        <span>School</span>
+                        <strong id="displaySchool">—</strong>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Favorite Hobby</span>
+                        <strong id="displayHobby">—</strong>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Country</span>
+                        <strong id="displayCountry">—</strong>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <span>Gender</span>
+                        <strong id="displayGender">—</strong>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -240,5 +311,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
